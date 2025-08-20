@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e3f2fd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            width: 400px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: left;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+        input[type="text"], input[type="date"], .checkbox-group {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .radio-group {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+        }
+        .btn {
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background: #0288d1;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #02669b;
+        }
+        #message {
+            display: none;
+            background: #c8e6c9;
+            color: #2e7d32;
+            padding: 15px;
+            text-align: center;
+            margin-top: 15px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .checkbox-group label {
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Patient Registration</h2>
+        <form id="patientForm">
+            <label>First Name:</label>
+            <input type="text" placeholder="Enter Patient First Name" required>
+
+            <label>Last Name:</label>
+            <input type="text" placeholder="Enter Patient Last Name" required>
+
+            <label>Date of Birth:</label> 
+            <input type="date" required>
+
+            <label>Gender:</label> 
+            <div class="radio-group">
+                <label><input type="radio" name="gender" value="male"> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+            </div>
+
+            <label>Select Diseases:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox"> Symptoms</label>
+                <label><input type="checkbox"> Causes</label>
+                <label><input type="checkbox"> Treatment</label>
+
+            </div>
+            Enter Native Address:<input type="text" value="A/P :"><br>
+            Enter Curernt Address:<input type="text" value="A/P :"><br>
+            Enter Contact Number:<input type="text" value="+91 " ><br>
+            <button type="button" class="btn" onclick="showMessage()">Submit</button>
+        </form>
+        
+        <div id="message">
+            Your information has been submitted successfully!<br>
+            <a href="home.html" class="btn">Go to Home Page</a>
+        </div>
+       
+    </div>
+    
+    <script>
+        function showMessage() {
+            document.getElementById("message").style.display = "block";
+            document.getElementById("patientForm").reset();
+        }
+    </script>
+
+</body>
+</html>

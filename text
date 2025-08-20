@@ -1,0 +1,8 @@
+Add Dataset : Admin can add dataset file in Database
+view Doctors :Admin can view verious Doctor along with their personal details 
+
+View Disease : Admin can view verious details stored in database
+view Patient :Admin can view verious details who had accessed the System
+
+View Feedback :Admin can feedback provided by verious users
+

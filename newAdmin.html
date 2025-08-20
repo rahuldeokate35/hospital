@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            width: 300px;
+            margin: auto;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 10px 0 0;
+            font-size: 16px;
+            color: white;
+            background: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+        #message {
+            display: none;
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>New Doctor Registration</h2>
+        <form id="adminForm">
+            <input type="text" id="firstName" placeholder="Enter First Name" required> <br>
+            <input type="text" id="lastName" placeholder="Enter Last Name" required><br>
+            <input type="text" id="city" placeholder="Enter City" required> <br>
+            <input type="text" id="email" placeholder="abc@gmail.com" required><br>
+            <input type="text" id="mobile" placeholder="Enter Mobile No" required><br>
+            <input type="button" value="Submit" class="btn" onclick="showMessage()">
+        </form>
+        
+        <div id="message">
+            <p>Admin Added Successfully!</p>
+            <a href="adminLogin.html" class="btn">Go to Login</a>
+        </div>
+
+        <a href="home.html" class="btn" style="padding-right: 20px;">Home</a>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById("message").style.display = "block";
+            document.getElementById("adminForm").reset(); 
+        }
+    </script>
+
+</body>
+</html>
